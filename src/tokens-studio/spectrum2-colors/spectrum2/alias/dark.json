@@ -5,7 +5,8 @@
       "type": "color",
       "$extensions": {
         "spectrum-tokens": {
-          "name": "banana-color"
+          "name": "banana-color",
+          "uuid": "f0cbb131-27d1-4865-a32c-7a83919aa41f"
         }
       }
     },
