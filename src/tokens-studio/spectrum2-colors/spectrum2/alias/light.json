@@ -9,6 +9,15 @@
         }
       }
     },
+    "orange": {
+      "value": "{Palette.white}",
+      "type": "color",
+      "$extensions": {
+        "spectrum-tokens": {
+          "name": "orange-color"
+        }
+      }
+    },
     "overlay": {
       "value": "{Palette.black}",
       "type": "color",
