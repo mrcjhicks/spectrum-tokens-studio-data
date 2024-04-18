@@ -1,5 +1,14 @@
 {
   "Alias": {
+    "grape": {
+      "value": "{Palette.white}",
+      "type": "color",
+      "$extensions": {
+        "spectrum-tokens": {
+          "name": "grape-color"
+        }
+      }
+    },
     "overlay": {
       "value": "{Palette.black}",
       "type": "color",
