@@ -34,9 +34,9 @@ jobs:
           path: spectrum-tokens
           ref: ${{ inputs.branch }}
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18.13.x
+          node-version: '20.11.1'
       - name: Test the token data
         if: ${{ inputs.test == true }}
         run: |
@@ -58,7 +58,7 @@ jobs:
       - name: Create spectrum-tokens PR...
         if: ${{ inputs.test == false }}
         id: cpr-spectrum-tokens
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v6
         with:
           path: spectrum-tokens
           draft: ${{ github.base_ref != 'main' }}
@@ -80,7 +80,7 @@ jobs:
       - name: Create spectrum-tokens-studio-data PR...
         if: ${{ inputs.test == false }}
         id: cpr-tokens-studio
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v6
         with:
           path: spectrum-tokens-studio-data
           branch: tokens-sync/patch-${{ inputs.source }}-for-${{ steps.extract_branch.outputs.branch }}
@@ -111,8 +111,9 @@ jobs:
           cat ./logs/cout.log >> $GITHUB_STEP_SUMMARY
       - name: Archive change logs
         if: ${{ hashFiles('./logs/*.json') != '' }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: changes
           path: ./logs/*.json
+          overwrite: true
       - run: echo "🍏 This job's status is ${{ job.status }}."
