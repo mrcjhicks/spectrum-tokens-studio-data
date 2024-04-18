@@ -5,7 +5,8 @@
       "type": "color",
       "$extensions": {
         "spectrum-tokens": {
-          "name": "banana-color"
+          "name": "banana-color",
+          "uuid": "6cbc0257-1695-4403-b684-de983a5086dd"
         }
       }
     },
@@ -14,7 +15,8 @@
       "type": "color",
       "$extensions": {
         "spectrum-tokens": {
-          "name": "orange-color"
+          "name": "orange-color",
+          "uuid": "2626a043-6c7c-48b4-a6f1-bb27d4da3b89"
         }
       }
     },
