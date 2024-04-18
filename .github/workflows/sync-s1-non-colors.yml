@@ -11,6 +11,7 @@ on:
 
 concurrency:
   group: sync-s1
+  cancel-in-progress: true                          # doesn't actually work?
 
 jobs:
   check_should_run:      
