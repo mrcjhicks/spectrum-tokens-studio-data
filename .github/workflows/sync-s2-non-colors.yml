@@ -9,10 +9,6 @@ on:
     paths:
       - 'src/tokens-studio/spectrum2-non-colors/**'   # only run when files in this path change
 
-concurrency:
-  group: sync-s2
-  cancel-in-progress: true                            # doesn't actually work?
-
 jobs:
   check_should_run:      
     uses: ./.github/workflows/_diff-should-run.yml

@@ -13,6 +13,10 @@ on:
         required: true
         type: boolean
 
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
 jobs:
   diff:
     runs-on: ubuntu-latest
